@@ -23,8 +23,5 @@ execute("apt-get update") { ignore_failure true }.run_action(:run)
 #turn off apparmor
 service("apparmor") { action [:stop,:disable] }
 
-#remove any .bash_logouts
-file("/root/.bash_logout") { action :delete }
-
 #turn off byobu
 file("/etc/profile.d/Z98-byobu") { action :delete }
