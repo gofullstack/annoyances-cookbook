@@ -11,11 +11,11 @@ Looks at the node's platform and includes the proper recipe, then removes `annoy
 
 rhel
 ----
-Red Hat, CentOS and Scientific Linux are currently supported.
+Removes any preexisting firewall rules, turns off SELinux, uninstalls apache if it's on for some reason and removes /root/.bash_logout if it exists. Red Hat, CentOS, Fedora and Scientific Linux are currently supported.
 
 ubuntu
 ------
-Ubuntu is currently supported.
+Does an "apt-get update", turns off apparmor and turns off byobu. Currently Ubuntu-only.
 
 Usage
 =====
